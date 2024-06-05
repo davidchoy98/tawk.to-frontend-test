@@ -47,7 +47,8 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, 'public'),
 		port: 9000,
-		before: function(app, server, compiler) {
+		historyApiFallback: true,
+		before: function(app) {
 			app.get('/api/categories', function (req, res) {
 				res.json(dataObj.categories);
 			});
