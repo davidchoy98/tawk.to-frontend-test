@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header></Header>
-        <SearchBar @search="search" />
+        <SearchBar />
 
         <div id="content">
             <div class="row">

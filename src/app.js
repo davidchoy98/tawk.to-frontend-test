@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './pages/App.vue'
 import Main from './pages/categories/index.vue'
 import Details from './pages/categories/_id.vue'
+import Search from './pages/search.vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -36,7 +37,25 @@ const routes = [
 				}
 			]
 		}
-	}
+	},
+	{
+		path: '/search',
+		name: 'Search',
+		component: Search,
+		meta: {
+			breadcrumb: [
+				{
+					text: 'All Categories',
+					name: 'Categories'
+				}
+				,
+				{
+					text: 'Search Results',
+					name: 'Search'
+				}
+			]
+		}
+	},
 ];
 
 const router = new VueRouter({

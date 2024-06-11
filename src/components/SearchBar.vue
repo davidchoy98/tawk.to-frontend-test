@@ -13,16 +13,12 @@ export default {
             keyword: ''
         };
     },
-    watch: {
-        keyword: {
-            handler() {
-                this.$emit('search', this.keyword)
-            }
-        }
-    },
     methods: {
         search() {
-            
+            this.$router.push({
+                name: 'Search',
+                query: { keyword: this.keyword }
+            })
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header></Header>
-		<SearchBar @search="search" />
+		<SearchBar />
 
 		<div class="content" v-for="chunk in modified">
 			<Tile
